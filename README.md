@@ -1,13 +1,13 @@
 # gamedev-fa2023-mp1
-CMSC391/COAR463 Game Development - Minor Project 1
-Team VOID
+CMSC391/COAR463 Game Development - Minor Project 1  
+Team VOID  
 Members: Tristan, Natalie
 
-Game: Space Golf - https://play.unity.com/mg/other/project-1-ver
-Controls: Click and drag to set direction and launch power
-Collecting stars gives a points multiplier
-Fewer shots = better score
-The black hole will suck you in if you get too close, but can also be used to curve your shots if you're brave enough!
+Game: Space Golf - https://play.unity.com/mg/other/project-1-ver  
+Controls: Click and drag to set direction and launch power  
+Collecting stars gives a points multiplier  
+Fewer shots = better score  
+The black hole will suck you in if you get too close, but can also be used to curve your shots if you're brave enough!  
 Can you get a 3-star hole in one?
 
 Changes since last time: 
