@@ -71,12 +71,9 @@ public class Arrow_Control : MonoBehaviour
         }
         if (collision.CompareTag("Goal"))
         {
-            startPosition = new Vector2(Random.Range(-17, 17), Random.Range(-8, 8));
-            ball.position = startPosition;
-            ballCollision.velocity = Vector2.zero;
-
             Vector2 newGoalPosition = new Vector2(Random.Range(-18, 18), Random.Range(-8, 8));
             collision.transform.position = newGoalPosition;
+
             score = 1000 + (par * 100) - (strikes * 100);
             if (strikes == 1)
             {
@@ -91,8 +88,14 @@ public class Arrow_Control : MonoBehaviour
             scoreDisplay.SetText("High Score: " + highScore);
             scoreMultiplier = 1;
             resetStars();
-            randomizeBlackHole();
+            Vector2 blackHolePosition = randomizeBlackHole();
             //randomizeAsteroids();
+            do {
+                startPosition = new Vector2(Random.Range(-17, 17), Random.Range(-8, 8));
+            } while (Vector2.Distance(blackHolePosition, startPosition) < 3.0f);
+            ball.position = startPosition;
+            ballCollision.velocity = Vector2.zero;
+
         }
         if (collision.CompareTag("Star"))
         {
@@ -159,11 +162,12 @@ public class Arrow_Control : MonoBehaviour
         }
         starGroup.transform.position = Vector2.zero;
     }
-    void randomizeBlackHole()
+    Vector2 randomizeBlackHole()
     {
         GameObject blackHole = GameObject.FindGameObjectWithTag("BlackHoleCenter");
-        blackHole.transform.position = new Vector2(Random.Range(-15, 15), Random.Range(-5, 5));
-
+        Vector2 newPosition = new Vector2(Random.Range(-15, 15), Random.Range(-5, 5));
+        blackHole.transform.position = newPosition;
+        return newPosition;
     }
     void randomizeAsteroids()
     {

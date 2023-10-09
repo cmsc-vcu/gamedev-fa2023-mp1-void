@@ -1,18 +1,15 @@
 # gamedev-fa2023-mp1
 CMSC391/COAR463 Game Development - Minor Project 1
+Team VOID
+Members: Tristan, Natalie
 
-Great job on creating your own copy of the minor project 1 scaffold!
+Game: Space Golf - https://play.unity.com/mg/other/project-1-ver
+Controls: Click and drag to set direction and launch power
+Collecting stars gives a points multiplier
+Fewer shots = better score
+The black hole will suck you in if you get too close, but can also be used to curve your shots if you're brave enough!
+Can you get a 3-star hole in one?
 
-Be sure to review the resources on the Canvas site Week 6:
-
-<https://virginiacommonwealth.instructure.com/courses/86151/modules>
-
-To learn more about writing good README.md files, see:
-
-<https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/>
-
-This is a scaffold project. I’ll be providing scaffolds throughout the
-semester to get you working faster, and to make grading much easier for
-the TA team.
-
-Good luck!
+Changes since last time: 
+- Added a new background (Natalie)
+- Prevented player from spawning inside black hole radius (Tristan)
